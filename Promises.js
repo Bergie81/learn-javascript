@@ -32,15 +32,6 @@ promise
   .finally(() => console.log('finally.. ')); // will be logged no matter if promise resolved or rejected
 
 
-// ERROR HANDLING
-promise
-  .then(result => {
-    throw Error('Ooops!') //create an error
-    console.log(result); // ...not logged
-  })
-  .catch(error => console.log("Show error: ", error)); // has to be at the end!
-
-
 // EXAMPLES
 // fetch returns a promise
 fetch('https://jsonplaceholder.typicode.com/users')
